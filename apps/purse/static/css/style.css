@@ -51,17 +51,16 @@ table {
     url("fonts/kesslersuperdisplay-regular-TRIAL.otf") format("opentype"),
 }
 #videobg {
-    position: fixed;
-    opacity:0.75;
+    position:absolute;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
 }
 #logo{
-    position:fixed;
-    top:12%;
-    left:8%;
+    z-index:2;
+    grid-row-start:2;
+    grid-column-start:1;
 }
 .content, .content2, .content3{
     position:fixed;
@@ -104,8 +103,16 @@ table {
     padding-bottom:6px;
 }
 #wrapper{
-    position:absolute;
-    background-color:rgb(49, 49, 49);
-    min-width: 100%; 
-    min-height: 100%;
+    display:grid;
+    margin-left:90px;
+    margin-right:90px;
+    grid-column-gap:40px;
+    grid-template-columns:repeat(12,65px);
+    grid-template-rows:repeat(8,60px);
+    grid-row-gap:12px;
+    height:100%;
+    background-color:black;
+}
+html, body{
+    height:100%;
 }

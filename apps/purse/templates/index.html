@@ -13,17 +13,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+    var arrow1=$(".arrow");
+    var content1=$(".content");
+    var content2=$(".content2");
+    var content3=$(".content3");
+
     function arrow(){
-        $(".arrow").animate({top:'-=12px'});
-        $(".arrow").animate({top:'+=12px'});
-        $(".arrow").animate({top:'-=8px'});
-        $(".arrow").animate({top:'+=8px'}).delay(600);
+        arrow1.animate({top:'-=12px'});
+        arrow1.animate({top:'+=12px'});
+        arrow1.animate({top:'-=8px'});
+        arrow1.animate({top:'+=8px'}).delay(600);
         arrow()
     }
-    $(".content").delay(650).animate({top: '-=32px',opacity: '1',},"slow");
-    $(".content2").delay(1300).animate({top: '-=32px',opacity: '1',},"slow");
-    $(".content3").delay(1950).animate({top: '-=32px',opacity: '1',},"slow");
-    $(".arrow").delay(2700).animate({opacity: '1',},"slow");
+
+    content1.delay(650).animate({top: '-=32px',opacity: '1',},"slow");
+    content2.delay(1300).animate({top: '-=32px',opacity: '1',},"slow");
+    content3.delay(1950).animate({top: '-=32px',opacity: '1',},"slow");
+    arrow1.delay(2700).animate({opacity: '1',},"slow");
     arrow();
 });
 </script>
@@ -35,26 +41,28 @@ $(document).ready(function(){
         Your browser does not support HTML5 video.
     </video>
     <div id="logo">
-        <img src='/static/img/KWONNLOGO.png' width=90% height=90%/>
+        <img src='/static/img/KWONNLOGO.png'/>
     </div>
-    <div class="content">
-        <div class='underline'>
-            Washable
-        </div><br>
-    </div>
-    <div class="content2">
-        <div class='underline'>
-            Vegan
-        </div><br>
-    </div>
-    <div class="content3">
-        <div class='underline'>
-            Lightweight
-        </div><br>
-    </div>
-    <div class="arrow">
-        <img src='/static/img/arrow.png' height=85% width=85%>
-    </div>
+    <a href="/pages/shop">
+        <div class="content">
+            <div class='underline'>
+                Washable
+            </div><br>
+        </div>
+        <div class="content2">
+            <div class='underline'>
+                Vegan
+            </div><br>
+        </div>
+        <div class="content3">
+            <div class='underline'>
+                Lightweight
+            </div><br>
+        </div>
+        <div class="arrow">
+            <a href="/pages/shop"><img src='/static/img/arrow.png' height=85% width=85%></a>
+        </div>
+    </a>
 </div>
 </body>
 </html>
